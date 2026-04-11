@@ -37,7 +37,7 @@ const documents = await cheerioLoader.load();
 console.assert(documents.length === 1);
 console.log(`Total characters: ${documents[0].pageContent.length}`);
 
-// 分割
+// 递归分割
 const textSplitter = new RecursiveCharacterTextSplitter({
   chunkSize: 500, // 每个分块的字符数
   chunkOverlap: 50, // 分块之间的重叠字符数
